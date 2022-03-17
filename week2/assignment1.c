@@ -18,6 +18,12 @@ Polynomial addPoly(Polynomial lhs, Polynomial rhs) {
     for (int i = 0; i <= rhs.degree; i++)
         result.coef[i + result.degree - rhs.degree] += rhs.coef[i];
 
+    int nzidx = 0;
+    while (result.coef[nzidx] == 0) nzidx++;
+
+    result.degree -= nzidx;
+    for (int i = 0; i < result.degree; i++) result.coef[i] = result.coef[i + nzidx];
+
     return result;
 }
 
