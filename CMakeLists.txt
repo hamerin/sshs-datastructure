@@ -4,4 +4,4 @@ project(Problem-Solving)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_BUILD_TYPE Release)
 
-add_executable(a.out week4/assignment3.c)
+add_executable(a.out week5/assignment4.c)
