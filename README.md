@@ -199,4 +199,4 @@ TreeNode *deleteNode(TreeNode *root, char x) {
   * 데이터의 저장 규칙에 의해 root가 무조건 우선: root 삭제
   * 빈 root를 채우기 위해 배열의 마지막을 임시로 root로 설정
   * 데이터의 저장 규칙을 만족시키기 위해 left child, right child, parent(=root) 중 parent가 가장 우선이 아니라면, left와 right 중 보다 우선인 것과 swap
-  * top-down 방식으로, swap되었을 경우 swap된 child에 대해서 같은 과정을 재귀적으로 수
+  * top-down 방식으로, swap되었을 경우 swap된 child에 대해서 같은 과정을 재귀적으로 수행
