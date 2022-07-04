@@ -102,8 +102,8 @@
 * 탐색, 삽입, 삭제 $\Theta(\text{depth})$인데, (보편적인 경우에) $o(n)$
   * self-balancing 기법이 적용된 BST는 $O(\lg n)$으로 fix 가능 
 
-* 기본 원리: 이진 트리 + 데이터의 저장 규칙
-  * left subtree의 모든 값 < root의 값 < right subtree의 모든 값
+* 기본 원리: 이진 트리 + **데이터의 저장 규칙**
+  * **left subtree의 모든 값 < root의 값 < right subtree의 모든 값**
 
 ### 구현
 
@@ -176,15 +176,20 @@ TreeNode *deleteNode(TreeNode *root, char x) {
 ## 힙
 
 * 완전 이진 트리를 이용한 일종의 우선순위를 가지는 큐 형태
+
 * 스택 / 큐 정도의 인터페이스를 가지고 있지만 안에서 자동으로 정렬되어서 최댓값 또는 최솟값을 동적으로 뽑을 수 있다고 생각하면 편함
-* 기본 원리: 완전 이진 트리 + 데이터의 저장 규칙
-  * parent가 child보다 우선이다. (예를 들어, max heap의 경우 parent > child)
+
+* 기본 원리: 완전 이진 트리 + **데이터의 저장 규칙**
+
+  * **parent가 child보다 우선** (예를 들어, max heap의 경우 parent > child)
+
+* 놀랍게도 삽입, 삭제가 모두 $\Theta(\lg n)$
 
 ### 구현
 
 * 기본적으로, 완전 이진 트리의 1d 표현을 이용
   * level order대로 배열에 저장
-  * 1-based일 때, parent의 index가 n이라고 하면 left child의 index은 2n이고, right child의 index는 2n + 1이다.
+  * 1-based일 때, parent의 index가 n이라고 하면 left child의 index은 2n이고, right child의 index는 2n + 1
 * ~~구현이 어려운건 아닌데 예외 처리 같은게 좀 귀찮은 편~~
 * 삽입
   * 배열의 마지막(즉, 완전 이진 트리를 유지하면서 추가할 수 있는 위치)에 노드 추가
